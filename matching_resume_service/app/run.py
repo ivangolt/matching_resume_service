@@ -1,23 +1,21 @@
-import pandas as pd
-import numpy as np
-from flask import Flask
-from flask import render_template, request, jsonify, flash
-import plotly
 import json
+import warnings
 
+import pandas as pd
+import plotly
+from flask import Flask, render_template, request
+from pdf_reader import pdf_miner
 from plotly_figures import return_plots_dashboard, return_plots_resume_analyzer
 from scraping_linkedin import scraping_main
-from pdf_reader import pdf_miner
 from Spacy_text_analayzer import (
     Spacy_create_nlp,
+    get_match_score,
+    get_missing_skills,
     get_skills,
+    return_words_types,
     unique_skills,
     update_LinkedinJobs_DF,
-    return_words_types,
-    get_missing_skills,
-    get_match_score,
 )
-import warnings
 
 warnings.filterwarnings("ignore")
 

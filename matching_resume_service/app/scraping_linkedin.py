@@ -1,15 +1,17 @@
+import datetime
+import math
+import sys
+import time
+import warnings
+
+import numpy as np
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from bs4 import BeautifulSoup
-from selenium.webdriver.chrome.service import Service
-import requests
-
-import time, datetime
-import pandas as pd
-import numpy as np
-import math, re, sys
-import warnings
 
 warnings.filterwarnings("ignore")
 
@@ -18,7 +20,6 @@ from Spacy_text_analayzer import (
     Spacy_create_nlp,
     get_skills,
     unique_skills,
-    update_LinkedinJobs_DF,
 )
 
 
@@ -66,6 +67,7 @@ def find_Job_Ids(soup):
         # location = job_posting.find('li', class_='job-card-container__metadata-item').get_text().strip()
 
     return Job_Ids_on_the_page
+
 
 def scraping_Job_Ids(
     keywords,
@@ -182,8 +184,6 @@ def scraping_Job_Ids(
 ##########################################################################
 #     II- Scraping Job description using requests and BeautifulSoup
 ##########################################################################
-import requests
-from bs4 import BeautifulSoup
 
 
 def remove_tags(html):

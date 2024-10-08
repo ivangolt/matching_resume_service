@@ -2,17 +2,13 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-import pandas as pd
-import numpy as np
 import json
+
+import numpy as np
 
 # spacy
 import spacy
-from spacy.pipeline import EntityRuler
-from spacy.lang.en import English
-from spacy.tokens import Doc
 from spacy.matcher import Matcher
-
 
 #################################################################
 ########  Create nlp ruler with Spacy
@@ -148,7 +144,6 @@ def update_LinkedinJobs_DF(df, your_skills):
 #################################################################################
 #   display the job and highlight the skills you do and you do not have
 #################################################################################
-from spacy.matcher import Matcher
 
 
 def get_pattern(skill, rule_based_matching="LOWER"):

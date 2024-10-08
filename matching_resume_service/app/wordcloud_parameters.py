@@ -1,8 +1,8 @@
 import string
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import word_tokenize
-from wordcloud import WordCloud, STOPWORDS
 import warnings
+
+from nltk.tokenize import word_tokenize
+from wordcloud import STOPWORDS, WordCloud
 
 warnings.filterwarnings("ignore")
 

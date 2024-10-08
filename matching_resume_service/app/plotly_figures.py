@@ -1,13 +1,10 @@
-import json
-import plotly
-import pandas as pd
-import numpy as np
-import colorlover as cl
-from plotly.graph_objs import Bar, Pie, Histogram, Heatmap, Scatter
-
-from wordcloud_parameters import worldcloud_generator, wordcloud_params
-
 import warnings
+
+import colorlover as cl
+import numpy as np
+import pandas as pd
+from plotly.graph_objs import Bar, Histogram, Pie, Scatter
+from wordcloud_parameters import wordcloud_params, worldcloud_generator
 
 warnings.filterwarnings("ignore")
 
