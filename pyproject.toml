@@ -10,6 +10,19 @@ packages = [{include = "matching_resume_service"}]
 python = "^3.11"
 
 
+[tool.poetry.group.prod.dependencies]
+pdfminer = "^20191125"
+spacy = "^3.8.2"
+matplotlib = "^3.9.2"
+plotly = "^5.24.1"
+colorlover = "^0.3.0"
+wordcloud = "^1.9.3"
+pandas = "^2.2.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
