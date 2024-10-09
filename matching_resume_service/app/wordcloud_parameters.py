@@ -74,7 +74,7 @@ def wordcloud_params(wc):
 
     References
     -----------
-         https://github.com/PrashantSaikia/Wordcloud-in-Plotly
+
     """
 
     word_list = []

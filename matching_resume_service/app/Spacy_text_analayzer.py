@@ -26,7 +26,7 @@ def convect_skills_from_txt_to_Jsonl():
     file_txt.close()
 
     # 2. Create the skill patterns
-    rule_patterns = []
+    rule_patterns = []ё
     for skill in list_skills_in_demand:
         pattren = []
         for elt in skill.split(" "):
